@@ -1,0 +1,8 @@
+*.d
+*.p1
+*.pre
+funclist
+l.obj
+log.*
+startup.*
+usb-eeprom.*
