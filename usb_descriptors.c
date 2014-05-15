@@ -220,12 +220,12 @@ const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[1];}sd000={
 sizeof(sd000),USB_DESCRIPTOR_STRING,{0x0409}};
 
 //Manufacturer string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[25];}sd001={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[15];}sd001={
 sizeof(sd001),USB_DESCRIPTOR_STRING,
 {'S','t','e','v','e','n',' ','S','t','a','l','l','i','o','n'}};
 
 //Product string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[31];}sd002={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[21];}sd002={
 sizeof(sd002),USB_DESCRIPTOR_STRING,
 {'2','8','C',' ','E','E','P','R','O','M',' ','P','r','o','g','r','a','m','m','e','r'}};
 
