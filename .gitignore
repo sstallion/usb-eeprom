@@ -6,4 +6,4 @@
 /log.*
 /startup.*
 /usb-eeprom.*
-/eagle/*.l##
+/eagle/*.[bls]#*
