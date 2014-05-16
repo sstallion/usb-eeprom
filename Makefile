@@ -41,7 +41,7 @@ OBJS = main.p1 usb_descriptors.p1 usb_device.p1 usb_device_generic.p1
 all:	$(HEX)
 
 clean:
-	-$(RM) *.d *.p1 *.pre funclist l.obj log.* startup.* $(HEX:.hex=.*)
+	-$(RM) *.d *.p1 *.pre funclist l.obj log.* startup.* usb-eeprom.*
 
 run:	$(HEX)
 	$(IPECMD) $(IPEFLAGS) -f$< -m -ol

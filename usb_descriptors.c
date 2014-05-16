@@ -225,9 +225,9 @@ sizeof(sd001),USB_DESCRIPTOR_STRING,
 {'S','t','e','v','e','n',' ','S','t','a','l','l','i','o','n'}};
 
 //Product string descriptor
-const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[21];}sd002={
+const struct{uint8_t bLength;uint8_t bDscType;uint16_t string[24];}sd002={
 sizeof(sd002),USB_DESCRIPTOR_STRING,
-{'2','8','C',' ','E','E','P','R','O','M',' ','P','r','o','g','r','a','m','m','e','r'}};
+{'2','8','C','x','x','x',' ','E','E','P','R','O','M',' ','P','r','o','g','r','a','m','m','e','r'}};
 
 //Serial number string descriptor.  If a serial number string is implemented, 
 //it should be unique for every single device coming off the production assembly 
