@@ -345,7 +345,7 @@ UsedLibrary="usb-eeprom.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="65 24 998 550"
+Loc="65 24 664 423"
 State=2
 Number=0
 
