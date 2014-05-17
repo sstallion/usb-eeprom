@@ -80,7 +80,7 @@ void
 EEPROMInit(void)
 {
 	/*
-	 * Drive outputs low, except for WE and OE. A pull-up resistor on CE
+	 * Drive outputs low, except for OE and WE. A pull-up resistor on CE
 	 * ensures the chip remains disabled until the corresponding output
 	 * driver is enabled.
 	 */
@@ -88,7 +88,7 @@ EEPROMInit(void)
 	LATB = 0;
 	LATC = 0;
 	LATD = 0;
-	LATE = WE | OE;
+	LATE = OE | WE;
 
 	/* Disable analog inputs */
 	ANSELA = 0;
@@ -121,7 +121,7 @@ EEPROMRead(uint16_t addr, uint8_t *buf, uint16_t len)
 		LATA = ADDRA(addr);
 		LATE = WE;
 		*buf++ = PORTD;
-		LATE = WE | OE;
+		LATE = OE | WE;
 	}
 }
 
@@ -135,7 +135,7 @@ EEPROMWrite(uint16_t addr, uint8_t *buf, uint16_t len)
 		LATA = ADDRA(addr);
 		LATD = *buf++;
 		LATE = OE;
-		LATE = WE | OE;
+		LATE = OE | WE;
 		__delay_ms(10);
 	}
 }
@@ -150,7 +150,7 @@ EEPROMWritePage(uint16_t addr, uint8_t *buf, uint16_t len)
 		LATA = ADDRA(addr);
 		LATD = *buf++;
 		LATE = OE;
-		LATE = WE | OE;
+		LATE = OE | WE;
 	}
 	__delay_ms(10);
 }
@@ -172,7 +172,7 @@ EEPROMErase(void)
 		LATA = ADDRA(addr[i]);
 		LATD = data[i];
 		LATE = OE;
-		LATE = WE | OE;
+		LATE = OE | WE;
 	}
 	__delay_ms(10);
 	__delay_ms(10);
