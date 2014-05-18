@@ -7,3 +7,4 @@
 /startup.*
 /usb-eeprom.*
 /eagle/*.[bls]#*
+/eagle/*.pro
