@@ -144,9 +144,9 @@ void
 EEPROMWritePage(uint16_t addr, uint8_t *buf, uint16_t len)
 {
 	TRISD = 0;
-	LATC = ADDRC(addr);
-	LATB = ADDRB(addr);
 	while (addr++, len--) {
+		LATC = ADDRC(addr);
+		LATB = ADDRB(addr);
 		LATA = ADDRA(addr);
 		LATD = *buf++;
 		LATE = OE;

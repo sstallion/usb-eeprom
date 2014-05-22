@@ -33,5 +33,6 @@
 #pragma config CFGPLLEN = ON		/* PLL Enable */
 #pragma config LS48MHZ = SYS48X8	/* Low Speed USB Mode */
 #pragma config FOSC = INTOSCIO		/* Oscillator Selection */
+#pragma config WDTEN = OFF		/* Watchdog Timer Enable */
 
 #endif	/* CONFIG_H */
