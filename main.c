@@ -115,21 +115,21 @@ void
 EEPROMRead(uint16_t addr, uint8_t *buf, uint16_t len)
 {
 	TRISD = ~0;
-	while (addr++, len--) {
+	do {
 		LATC = ADDRC(addr);
 		LATB = ADDRB(addr);
 		LATA = ADDRA(addr);
 		LATE = WE;
 		*buf++ = PORTD;
 		LATE = OE | WE;
-	}
+	} while (++addr, --len);
 }
 
 void
 EEPROMWrite(uint16_t addr, uint8_t *buf, uint16_t len)
 {
 	TRISD = 0;
-	while (addr++, len--) {
+	do {
 		LATC = ADDRC(addr);
 		LATB = ADDRB(addr);
 		LATA = ADDRA(addr);
@@ -137,21 +137,21 @@ EEPROMWrite(uint16_t addr, uint8_t *buf, uint16_t len)
 		LATE = OE;
 		LATE = OE | WE;
 		__delay_ms(10);
-	}
+	} while (++addr, --len);
 }
 
 void
 EEPROMWritePage(uint16_t addr, uint8_t *buf, uint16_t len)
 {
 	TRISD = 0;
-	while (addr++, len--) {
-		LATC = ADDRC(addr);
-		LATB = ADDRB(addr);
+	LATC = ADDRC(addr);
+	LATB = ADDRB(addr);
+	do {
 		LATA = ADDRA(addr);
 		LATD = *buf++;
 		LATE = OE;
 		LATE = OE | WE;
-	}
+	} while (++addr, --len);
 	__delay_ms(10);
 }
 
