@@ -29,10 +29,26 @@
 
 #define _XTAL_FREQ 48000000UL		/* 48MHz */
 
+/* CONFIG1L */
 #pragma config PLLSEL = PLL3X		/* PLL Selection */
 #pragma config CFGPLLEN = ON		/* PLL Enable */
+#pragma config CPUDIV = NOCLKDIV	/* CPU System Clock Postscaler */
 #pragma config LS48MHZ = SYS48X8	/* Low Speed USB Mode */
+
+/* CONFIG1H */
 #pragma config FOSC = INTOSCIO		/* Oscillator Selection */
+#pragma config PCLKEN = ON		/* Primary Oscillator Shutdown */
+#pragma config FCMEN = OFF		/* Fail-Safe Clock Monitor */
+#pragma config IESO = OFF		/* Internal/External Oscillator Switchover */
+
+/* CONFIG2L */
+#pragma config nPWRTEN = OFF		/* Power-up Timer Enable */
+#pragma config BOREN = SBORDIS		/* Brown-out Reset Enable */
+#pragma config BORV = 190		/* Brown-out Reset Voltage */
+#pragma config nLPBOR = OFF		/* Low-Power Brown-out Reset */
+
+/* CONFIG2H */
 #pragma config WDTEN = OFF		/* Watchdog Timer Enable */
+#pragma config WDTPS = 32768		/* Watchdog Timer Postscaler */
 
 #endif	/* CONFIG_H */
