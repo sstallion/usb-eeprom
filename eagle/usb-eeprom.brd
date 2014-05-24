@@ -1431,30 +1431,22 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;br&gt;
 Extended by Federico Battaglin &lt;author&gt;&amp;lt;federico.rd@fdpinternational.com&amp;gt;&lt;/author&gt; with DUOLED</description>
 <packages>
-<package name="CHIPLED_0805">
-<description>&lt;b&gt;CHIPLED&lt;/b&gt;&lt;p&gt;
-Source: http://www.osram.convergy.de/ ... LG_R971.pdf</description>
-<wire x1="-0.35" y1="0.925" x2="0.35" y2="0.925" width="0.1016" layer="51" curve="162.394521"/>
-<wire x1="-0.35" y1="-0.925" x2="0.35" y2="-0.925" width="0.1016" layer="51" curve="-162.394521"/>
-<wire x1="0.575" y1="0.525" x2="0.575" y2="-0.525" width="0.1016" layer="51"/>
-<wire x1="-0.575" y1="-0.5" x2="-0.575" y2="0.925" width="0.1016" layer="51"/>
-<circle x="-0.45" y="0.85" radius="0.103" width="0.1016" layer="51"/>
-<smd name="C" x="0" y="1.05" dx="1.2" dy="1.2" layer="1"/>
-<smd name="A" x="0" y="-1.05" dx="1.2" dy="1.2" layer="1"/>
-<text x="-1.27" y="-1.27" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="2.54" y="-1.27" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="0.3" y1="0.5" x2="0.625" y2="1" layer="51"/>
-<rectangle x1="-0.325" y1="0.5" x2="-0.175" y2="0.75" layer="51"/>
-<rectangle x1="0.175" y1="0.5" x2="0.325" y2="0.75" layer="51"/>
-<rectangle x1="-0.2" y1="0.5" x2="0.2" y2="0.675" layer="51"/>
-<rectangle x1="0.3" y1="-1" x2="0.625" y2="-0.5" layer="51"/>
-<rectangle x1="-0.625" y1="-1" x2="-0.3" y2="-0.5" layer="51"/>
-<rectangle x1="0.175" y1="-0.75" x2="0.325" y2="-0.5" layer="51"/>
-<rectangle x1="-0.325" y1="-0.75" x2="-0.175" y2="-0.5" layer="51"/>
-<rectangle x1="-0.2" y1="-0.675" x2="0.2" y2="-0.5" layer="51"/>
-<rectangle x1="-0.1" y1="0" x2="0.1" y2="0.2" layer="21"/>
-<rectangle x1="-0.6" y1="0.5" x2="-0.3" y2="0.8" layer="51"/>
-<rectangle x1="-0.625" y1="0.925" x2="-0.3" y2="1" layer="51"/>
+<package name="SML0805">
+<description>&lt;b&gt;SML0805-2CW-TR (0805 PROFILE)&lt;/b&gt; COOL WHITE&lt;p&gt;
+Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
+<wire x1="-0.95" y1="-0.55" x2="0.95" y2="-0.55" width="0.1016" layer="51"/>
+<wire x1="0.95" y1="-0.55" x2="0.95" y2="0.55" width="0.1016" layer="51"/>
+<wire x1="0.95" y1="0.55" x2="-0.95" y2="0.55" width="0.1016" layer="51"/>
+<wire x1="-0.95" y1="0.55" x2="-0.95" y2="-0.55" width="0.1016" layer="51"/>
+<wire x1="-0.175" y1="-0.025" x2="0" y2="0.15" width="0.0634" layer="21"/>
+<wire x1="0" y1="0.15" x2="0.15" y2="0" width="0.0634" layer="21"/>
+<wire x1="0.15" y1="0" x2="-0.025" y2="-0.175" width="0.0634" layer="21"/>
+<wire x1="-0.025" y1="-0.175" x2="-0.175" y2="-0.025" width="0.0634" layer="21"/>
+<circle x="-0.275" y="0.4" radius="0.125" width="0" layer="21"/>
+<smd name="C" x="-1.05" y="0" dx="1.2" dy="1.2" layer="1"/>
+<smd name="A" x="1.05" y="0" dx="1.2" dy="1.2" layer="1"/>
+<text x="-1.5" y="1" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.5" y="-2" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -1731,10 +1723,6 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="55.3085" y="11.43" size="1.27" layer="27" font="vector" align="center"/>
 </element>
 <element name="ICSP" library="usb-eeprom" package="ICSP" value="ICSP" x="21.59" y="20.955" smashed="yes">
-<attribute name="MFG" value="N/A" x="21.59" y="20.955" size="1.778" layer="27" display="off"/>
-<attribute name="MFG_PN" value="N/A" x="21.59" y="20.955" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PN" value="N/A" x="21.59" y="20.955" size="1.778" layer="27" display="off"/>
-<attribute name="NOTES" value="N/A" x="21.59" y="20.955" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="29.21" y="19.05" size="1.27" layer="25" font="vector" align="top-right"/>
 </element>
 <element name="J1" library="usb-eeprom" package="USBA" value="USBA" x="2.9972" y="11.43" smashed="yes">
@@ -1779,12 +1767,12 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="MFG_PN" value="CRCW0805100RFKEA" x="66.04" y="-23.495" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="10.16" y="19.685" size="0.762" layer="25" font="vector" align="top-center"/>
 </element>
-<element name="D1" library="led" package="CHIPLED_0805" value="BLUE" x="4.445" y="20.955" smashed="yes" rot="R90">
-<attribute name="MOUSER_PN" value="604-APT2012QBC/D" x="47.625" y="53.975" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG" value="Kingbright" x="47.625" y="53.975" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NOTES" value="3.3V 20mA" x="47.625" y="53.975" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MFG_PN" value="APT2012QBC/D" x="47.625" y="53.975" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="4.445" y="19.685" size="0.762" layer="25" font="vector" align="top-center"/>
+<element name="D1" library="led" package="SML0805" value="BLUE" x="4.445" y="20.955" smashed="yes">
+<attribute name="MOUSER_PN" value="604-APT2012QBC/D" x="37.465" y="-22.225" size="1.778" layer="27" display="off"/>
+<attribute name="MFG" value="Kingbright" x="37.465" y="-22.225" size="1.778" layer="27" display="off"/>
+<attribute name="NOTES" value="3.3V 20mA" x="37.465" y="-22.225" size="1.778" layer="27" display="off"/>
+<attribute name="MFG_PN" value="APT2012QBC/D" x="37.465" y="-22.225" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="3.175" y="20.955" size="0.762" layer="25" font="vector" rot="R270" align="top-center"/>
 </element>
 <element name="C1" library="rcl" package="C0805" value=".1uF" x="38.735" y="20.955" smashed="yes" rot="MR180">
 <attribute name="MOUSER_PN" value="77-VJ0805Y104KXJCBC" x="55.245" y="74.295" size="1.778" layer="28" rot="MR180" display="off"/>

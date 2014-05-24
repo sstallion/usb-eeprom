@@ -8577,12 +8577,7 @@ Source: www.kingbright.com</description>
 <attribute name="MOUSER_PN" value="517-228-1371-00"/>
 <attribute name="NOTES" value="28 PIN ZIF SOCKET"/>
 </part>
-<part name="ICSP" library="usb-eeprom" deviceset="ICSP" device="">
-<attribute name="MFG" value="N/A"/>
-<attribute name="MFG_PN" value="N/A"/>
-<attribute name="MOUSER_PN" value="N/A"/>
-<attribute name="NOTES" value="N/A"/>
-</part>
+<part name="ICSP" library="usb-eeprom" deviceset="ICSP" device=""/>
 <part name="J1" library="usb-eeprom" deviceset="USB" device="A">
 <attribute name="MFG" value="Molex"/>
 <attribute name="MFG_PN" value="48037-0001"/>
@@ -8619,7 +8614,7 @@ Source: www.kingbright.com</description>
 <attribute name="MOUSER_PN" value="71-CRCW0805-100-E3"/>
 <attribute name="NOTES" value="1/8W 1%"/>
 </part>
-<part name="D1" library="led" deviceset="LED" device="CHIPLED_0805" value="BLUE">
+<part name="D1" library="led" deviceset="LED" device="SML0805" value="BLUE">
 <attribute name="MFG" value="Kingbright"/>
 <attribute name="MFG_PN" value="APT2012QBC/D"/>
 <attribute name="MOUSER_PN" value="604-APT2012QBC/D"/>
@@ -8677,12 +8672,7 @@ Source: www.kingbright.com</description>
 <attribute name="MOUSER_PN" x="215.9" y="104.14" size="1.778" layer="96" display="off"/>
 <attribute name="NOTES" x="215.9" y="104.14" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="ICSP" gate="G$1" x="48.26" y="119.38">
-<attribute name="MFG" x="48.26" y="119.38" size="1.778" layer="96" display="off"/>
-<attribute name="MFG_PN" x="48.26" y="119.38" size="1.778" layer="96" display="off"/>
-<attribute name="MOUSER_PN" x="48.26" y="119.38" size="1.778" layer="96" display="off"/>
-<attribute name="NOTES" x="48.26" y="119.38" size="1.778" layer="96" display="off"/>
-</instance>
+<instance part="ICSP" gate="G$1" x="48.26" y="119.38"/>
 <instance part="J1" gate="G$1" x="71.12" y="111.76">
 <attribute name="MFG" x="71.12" y="111.76" size="1.778" layer="96" display="off"/>
 <attribute name="MFG_PN" x="71.12" y="111.76" size="1.778" layer="96" display="off"/>
