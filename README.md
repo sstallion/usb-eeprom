@@ -61,17 +61,14 @@ Atmel Parallel EEPROM (AT28C256):
 
     $ go test -v -bench . -benchtime 10ms github.com/sstallion/go/eeprom
     === RUN TestReset
-    --- PASS: TestReset (0.26 seconds)
+    --- PASS: TestReset (0.52 seconds)
     === RUN TestVerify
-    --- PASS: TestVerify (5.38 seconds)
-            eeprom_test.go:62: verifying WriteBytes
-            eeprom_test.go:62: verifying WritePages
+    --- PASS: TestVerify (3.07 seconds)
+            eeprom_test.go:60: verifying WriteBytes
+            eeprom_test.go:60: verifying WritePages
     PASS
-    BenchmarkRead8K                    1        151224468 ns/op
-    BenchmarkWriteBytes8K              1        83607361736 ns/op
-    BenchmarkWritePages8K              1        1364394100 ns/op
-    BenchmarkErase                     1        21318916 ns/op
-    ok      github.com/sstallion/go/eeprom      90.789s
-
-_It should be noted that the timing for both write modes could be improved by
-adding support for DATA polling._
+    BenchmarkRead8K                1         127606655 ns/op
+    BenchmarkWriteBytes8K          1       47246599165 ns/op
+    BenchmarkWritePages8K          1         768764029 ns/op
+    BenchmarkErase                 1          20806348 ns/op
+    ok      github.com/sstallion/go/eeprom   51.824s
