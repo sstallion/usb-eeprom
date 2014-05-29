@@ -104,10 +104,20 @@ EEPROMInit(void)
 	TRISE = 0;
 
 	/*
-	 * Some parts (notably the AT28C and CAT28C families) employ a power on
+	 * Some chips (notably the AT28C and CAT28C families) employ a power on
 	 * delay to protect against inadvertent writes.
 	 */
 	__delay_ms(10);
+}
+
+void
+EEPROMPoll(uint8_t data)
+{
+	TRISD = ~0;
+	LATE = nWE;
+	while (PORTD != data)
+		;
+	LATE = nOE | nWE;
 }
 
 void
@@ -122,16 +132,6 @@ EEPROMRead(uint16_t addr, uint8_t *buf, uint16_t len)
 		*buf++ = PORTD;
 		LATE = nOE | nWE;
 	} while (++addr, --len);
-}
-
-void
-EEPROMPoll(uint8_t data)
-{
-	TRISD = ~0;
-	LATE = nWE;
-	while (PORTD != data)
-		;
-	LATE = nOE | nWE;
 }
 
 void
@@ -152,10 +152,10 @@ EEPROMWrite(uint16_t addr, uint8_t *buf, uint16_t len)
 void
 EEPROMWritePage(uint16_t addr, uint8_t *buf, uint16_t len)
 {
+	TRISD = 0;
 	LATC = ADDRC(addr);
 	LATB = ADDRB(addr);
 	do {
-		TRISD = 0;
 		LATA = ADDRA(addr);
 		LATD = *buf++;
 		LATE = nOE;
@@ -247,7 +247,7 @@ main(void)
 				len = (uint24_t)n + 1;
 				state = STATE_DATA;
 				break;
-			case 'Z': /* Erase */
+			case 'Z': /* Chip Erase */
 				EEPROMErase();
 				addr = 0, state = STATE_STATUS;
 				break;
