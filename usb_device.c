@@ -658,6 +658,8 @@ void USBDeviceTasks(void)
      */
     if(USBResetIF && USBResetIE)
     {
+        USB_RESET_HANDLER(EVENT_RESET,0,1);
+
         USBDeviceInit();
 
         //Re-enable the interrupts since the USBDeviceInit() function will

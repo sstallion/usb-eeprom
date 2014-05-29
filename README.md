@@ -13,24 +13,24 @@ of a single octet that indicates the command followed by zero or more octets
 that serve as parameters. All multi-octet parameters are interpreted as
 little-endian.
 
-_Packets should contain at most one command; additional payload will be
+_Command packets should contain at most one command; additional payload will be
 discarded by the device._
 
 ### Read
-A Read is indicated by 0x52 ('R'). Two parameters are required: the
-starting address and length of data to be transferred. Both parameters are
-16-bit unsigned integers. The device will respond with one or more data (IN)
-packets containing the data.
+A Read is indicated by 0x52 ('R'). Two parameters are required: the starting
+address and length of data to be transferred expressed as N-1. Both parameters
+are 16-bit unsigned integers. The device will respond with one or more data
+(IN) packets containing the data.
 
 ### Byte Write
-A Byte Write is indicated by 0x57 ('W'). Two parameters are
-required: the starting address and length of data to be transferred. Both
+A Byte Write is indicated by 0x57 ('W'). Two parameters are required: the
+starting address and length of data to be transferred expressed as N-1. Both
 parameters are 16-bit unsigned integers. One or more data (OUT) packets should
 follow containing the data.
 
 ### Page Write
-A Page Write is indicated by 0x50 ('P'). Two parameters are
-required: the starting address and length of data to be transferred. Both
+A Page Write is indicated by 0x50 ('P'). Two parameters are required: the
+starting address and length of data to be transferred expressed as N-1. Both
 parameters are 16-bit unsigned integers. One or more data (OUT) packets should
 follow containing the data. Data packets should be sized according to the page
 size.

@@ -36,21 +36,20 @@
 #define MAX(x, y) ((x) > (y) ? (x) : (y))
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 
-#define NELEM(x) (sizeof(x) / sizeof(*(x)))
+#define NELEM(x) (sizeof (x) / sizeof *(x))
 
 #define ADDRA(x) ((x) & 0xFF)
 #define ADDRB(x) ((x)>>8 & 0x1F)
 #define ADDRC(x) ((x)>>13 & 0x3)
 
-#define CE (1<<0)	/* Chip Enable */
-#define OE (1<<1)	/* Output Enable */
-#define WE (1<<2)	/* Write Enable */
+#define nCE (1<<0)	/* Chip Enable */
+#define nOE (1<<1)	/* Output Enable */
+#define nWE (1<<2)	/* Write Enable */
 
 uint8_t in[USBGEN_EP_SIZE] @0x500;
 uint8_t out[USBGEN_EP_SIZE] @0x540;
 
 enum {
-	STATE_RESET,
 	STATE_CMD,
 	STATE_DATA,
 	STATE_STATUS,
@@ -80,7 +79,7 @@ void
 EEPROMInit(void)
 {
 	/*
-	 * Drive outputs low, except for OE and WE. A pull-up resistor on CE
+	 * Drive outputs low, except for !OE and !WE. A pull-up resistor on !CE
 	 * ensures the chip remains disabled until the corresponding output
 	 * driver is enabled.
 	 */
@@ -88,7 +87,7 @@ EEPROMInit(void)
 	LATB = 0;
 	LATC = 0;
 	LATD = 0;
-	LATE = OE | WE;
+	LATE = nOE | nWE;
 
 	/* Disable analog inputs */
 	ANSELA = 0;
@@ -119,9 +118,9 @@ EEPROMRead(uint16_t addr, uint8_t *buf, uint16_t len)
 		LATC = ADDRC(addr);
 		LATB = ADDRB(addr);
 		LATA = ADDRA(addr);
-		LATE = WE;
+		LATE = nWE;
 		*buf++ = PORTD;
-		LATE = OE | WE;
+		LATE = nOE | nWE;
 	} while (++addr, --len);
 }
 
@@ -134,8 +133,8 @@ EEPROMWrite(uint16_t addr, uint8_t *buf, uint16_t len)
 		LATB = ADDRB(addr);
 		LATA = ADDRA(addr);
 		LATD = *buf++;
-		LATE = OE;
-		LATE = OE | WE;
+		LATE = nOE;
+		LATE = nOE | nWE;
 		__delay_ms(10);
 	} while (++addr, --len);
 }
@@ -149,8 +148,8 @@ EEPROMWritePage(uint16_t addr, uint8_t *buf, uint16_t len)
 	do {
 		LATA = ADDRA(addr);
 		LATD = *buf++;
-		LATE = OE;
-		LATE = OE | WE;
+		LATE = nOE;
+		LATE = nOE | nWE;
 	} while (++addr, --len);
 	__delay_ms(10);
 }
@@ -171,8 +170,8 @@ EEPROMErase(void)
 		LATB = ADDRB(addr[i]);
 		LATA = ADDRA(addr[i]);
 		LATD = data[i];
-		LATE = OE;
-		LATE = OE | WE;
+		LATE = nOE;
+		LATE = nOE | nWE;
 	}
 	__delay_ms(10);
 	__delay_ms(10);
@@ -193,8 +192,8 @@ USBEventHandler(USB_EVENT event, void *pdata, uint16_t size)
 		break;
 
 	case EVENT_RESET:
-		USBCancelIO(USBGEN_EP_NUM);
-		state = STATE_RESET;
+		if (USBGetDeviceState() == CONFIGURED_STATE)
+			RESET();
 		break;
 	}
 	return true;
@@ -211,7 +210,8 @@ main(void)
 {
 	USB_HANDLE h;
 	uint8_t cmd;
-	uint16_t addr, len, n;
+	uint16_t addr, n;
+	uint24_t len;
 
 	ClockInit();
 	EEPROMInit();
@@ -224,22 +224,17 @@ main(void)
 			continue;
 
 		switch (state) {
-		case STATE_RESET:
-			state = STATE_CMD;
-			break;
-
 		case STATE_CMD:
 			h = USBGenRead(USBGEN_EP_NUM, out, sizeof out);
 			while (USBHandleBusy(h))
 				;
-			if (state == STATE_RESET)
-				break;
 			switch (cmd = *out) {
 			case 'R': /* Read */
 			case 'W': /* Byte Write */
 			case 'P': /* Page Write */
 				memcpy(&addr, out+1, sizeof addr);
-				memcpy(&len, out+3, sizeof addr);
+				memcpy(&n, out+3, sizeof n);
+				len = (uint24_t)n + 1;
 				state = STATE_DATA;
 				break;
 			case 'Z': /* Erase */
@@ -263,8 +258,6 @@ main(void)
 				h = USBGenRead(USBGEN_EP_NUM, out, sizeof out);
 				while (USBHandleBusy(h))
 					;
-				if (state == STATE_RESET)
-					break;
 				n = USBHandleGetLength(h);
 				if (cmd == 'W')
 					EEPROMWrite(addr, out, n);

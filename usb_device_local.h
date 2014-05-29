@@ -434,3 +434,9 @@ typedef union
 #else
     #define USB_TRANSFER_COMPLETE_HANDLER(event,pointer,size)    USER_USB_CALLBACK_EVENT_HANDLER(event,pointer,size)
 #endif
+
+#if defined USB_DISABLE_RESET_HANDLER
+    #define USB_RESET_HANDLER(event,pointer,size)
+#else
+    #define USB_RESET_HANDLER(event,pointer,size)                USER_USB_CALLBACK_EVENT_HANDLER(event,pointer,size)
+#endif
