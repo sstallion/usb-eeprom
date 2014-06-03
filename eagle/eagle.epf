@@ -342,7 +342,6 @@ UsedLibrary="/opt/eagle-6.5.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="/opt/eagle-6.5.0/lbr/zetex.lbr"
 UsedLibrary="/opt/eagle-6.5.0/lbr/zilog.lbr"
 UsedLibrary="usb-eeprom.lbr"
-UsedLibrary="ohw-logo.lbr"
 
 [Win_1]
 Type="Control Panel"
