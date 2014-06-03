@@ -168,7 +168,7 @@ const USB_DEVICE_DESCRIPTOR device_dsc=
     USB_EP0_BUFF_SIZE,      //Max packet size for EP0, see usb_config.h
     0x04D8,                 //Vendor ID: Microchip Technology, Inc.
     0xF4CD,                 //Product ID: 28Cxxx EEPROM Programmer
-    0x0000,                 //Device release number in BCD format
+    0x0100,                 //Device release number in BCD format
     0x01,                   //Manufacturer string index
     0x02,                   //Product string index
     0x00,                   //Device serial number string index
