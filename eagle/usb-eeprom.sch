@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -215,10 +215,14 @@
 <pad name="27" x="-13.97" y="7.62" drill="0.8128" rot="R90"/>
 <pad name="28" x="-16.51" y="7.62" drill="0.8128" rot="R90"/>
 <text x="-24.13" y="0" size="1.27" layer="25" font="vector" rot="R90" align="bottom-center">&gt;NAME</text>
-<wire x1="-23.622" y1="11.43" x2="26.924" y2="11.43" width="0.127" layer="51"/>
-<wire x1="-23.622" y1="-11.43" x2="26.924" y2="-11.43" width="0.127" layer="51"/>
-<wire x1="-23.622" y1="11.43" x2="-23.622" y2="-11.43" width="0.127" layer="51"/>
-<wire x1="26.924" y1="11.43" x2="26.924" y2="-11.43" width="0.127" layer="51"/>
+<wire x1="-22.352" y1="11.43" x2="25.654" y2="11.43" width="0.127" layer="51"/>
+<wire x1="25.654" y1="11.43" x2="26.924" y2="10.16" width="0.127" layer="51" curve="-90"/>
+<wire x1="-22.352" y1="-11.43" x2="25.654" y2="-11.43" width="0.127" layer="51"/>
+<wire x1="25.654" y1="-11.43" x2="26.924" y2="-10.16" width="0.127" layer="51" curve="90"/>
+<wire x1="26.924" y1="-10.16" x2="26.924" y2="10.16" width="0.127" layer="51"/>
+<wire x1="-22.352" y1="11.43" x2="-23.622" y2="10.16" width="0.127" layer="51" curve="90"/>
+<wire x1="-23.622" y1="10.16" x2="-23.622" y2="-10.16" width="0.127" layer="51"/>
+<wire x1="-23.622" y1="-10.16" x2="-22.352" y2="-11.43" width="0.127" layer="51" curve="90"/>
 <circle x="-21.082" y="0" radius="1.27" width="0.127" layer="51"/>
 <circle x="24.384" y="0" radius="1.27" width="0.127" layer="51"/>
 <wire x1="-19.05" y1="10.16" x2="-19.05" y2="5.08" width="0.127" layer="51"/>
@@ -8090,7 +8094,7 @@ Source: www.kingbright.com</description>
 <attribute name="MFG" value="Microchip Technology"/>
 <attribute name="MFG_PN" value="PIC18F45K50-I/PT"/>
 <attribute name="MOUSER_PN" value="579-PIC18F45K50-I/PT"/>
-<attribute name="NOTES" value="48MHz 32KB FLASH/RAM"/>
+<attribute name="NOTES" value="48MHz 32KB FLASH 2KB RAM"/>
 </part>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="10K">
 <attribute name="MFG" value="Vishay"/>
