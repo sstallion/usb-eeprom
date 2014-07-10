@@ -202,8 +202,9 @@ USBEventHandler(USB_EVENT event, void *pdata, uint16_t size)
 		break;
 
 	case EVENT_RESET:
-		if (USBGetDeviceState() == CONFIGURED_STATE)
+		if (USBGetDeviceState() == CONFIGURED_STATE) {
 			RESET();
+		}
 		break;
 	}
 	return true;
@@ -248,8 +249,9 @@ main(void)
 				state = STATE_DATA;
 				break;
 			case 'Z': /* Chip Erase */
+				addr, len = 0;
 				EEPROMErase();
-				addr = 0, state = STATE_STATUS;
+				state = STATE_STATUS;
 				break;
 			}
 			break;

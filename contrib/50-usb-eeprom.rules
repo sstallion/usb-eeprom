@@ -1,0 +1,2 @@
+# 28Cxxx EEPROM Programmer rules
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="f4cd", MODE="0666"

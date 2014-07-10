@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -391,88 +391,6 @@ Adapted from the SparkFun Connectors library:&lt;br&gt;
 <rectangle x1="-4.1999" y1="4.95" x2="-3.8001" y2="6.1001" layer="51"/>
 <text x="0" y="0" size="1.27" layer="21" font="vector" align="center">&gt;VALUE</text>
 </package>
-<package name="OSHW">
-<description>&lt;b&gt;OSHW Logo&lt;/b&gt;
-&lt;p&gt;
-Adapted from OSHW Logo Repository:&lt;br&gt;
-&lt;a href="http://oshwlogo.com/logos/ohw-logo.lbr"&gt;http://oshwlogo.com/logos/ohw-logo.lbr&lt;/a&gt;</description>
-<wire x1="2.4384" y1="1.4224" x2="1.9304" y2="0.2794" width="0.1524" layer="21"/>
-<wire x1="1.9304" y1="0.2794" x2="1.6764" y2="0.4318" width="0.1524" layer="21"/>
-<wire x1="1.6764" y1="0.4318" x2="1.0668" y2="0" width="0.1524" layer="21"/>
-<wire x1="1.0668" y1="0" x2="0.6096" y2="0.4826" width="0.1524" layer="21"/>
-<wire x1="0.6096" y1="0.4826" x2="1.016" y2="1.0922" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="1.778" x2="0" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="0" y1="1.905" x2="0" y2="2.5654" width="0.1524" layer="21"/>
-<wire x1="0" y1="2.5654" x2="0.762" y2="2.7178" width="0.1524" layer="21"/>
-<wire x1="1.0414" y1="3.3528" x2="0.5842" y2="4.0132" width="0.1524" layer="21"/>
-<wire x1="0.5842" y1="4.0132" x2="1.0668" y2="4.4704" width="0.1524" layer="21"/>
-<wire x1="1.0668" y1="4.4704" x2="1.7272" y2="4.0132" width="0.1524" layer="21"/>
-<wire x1="2.3622" y1="4.2672" x2="2.4892" y2="5.08" width="0.1524" layer="21"/>
-<wire x1="2.4892" y1="5.08" x2="3.175" y2="5.08" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="5.08" x2="3.302" y2="4.2672" width="0.1524" layer="21"/>
-<wire x1="3.937" y1="4.0132" x2="4.5974" y2="4.4704" width="0.1524" layer="21"/>
-<wire x1="4.5974" y1="4.4704" x2="5.08" y2="4.0132" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="4.0132" x2="4.6228" y2="3.3528" width="0.1524" layer="21"/>
-<wire x1="4.9022" y1="2.7178" x2="5.6642" y2="2.5654" width="0.1524" layer="21"/>
-<wire x1="5.6642" y1="2.5654" x2="5.6642" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="5.6642" y1="1.905" x2="4.9022" y2="1.778" width="0.1524" layer="21"/>
-<wire x1="4.6482" y1="1.0922" x2="5.08" y2="0.4826" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="0.4826" x2="4.5974" y2="0" width="0.1524" layer="21"/>
-<wire x1="4.5974" y1="0" x2="3.9878" y2="0.4318" width="0.1524" layer="21"/>
-<wire x1="3.9878" y1="0.4318" x2="3.7338" y2="0.2794" width="0.1524" layer="21"/>
-<wire x1="3.7338" y1="0.2794" x2="3.2512" y2="1.4224" width="0.1524" layer="21"/>
-<wire x1="2.4384" y1="1.4478" x2="3.2512" y2="1.4478" width="0.1524" layer="21" curve="-308.267286"/>
-<wire x1="1.0245" y1="1.1004" x2="0.7637" y2="1.774" width="0.1524" layer="21" curve="-19.673848"/>
-<wire x1="0.7779" y1="2.7179" x2="1.0435" y2="3.3392" width="0.1524" layer="21" curve="-18.371859"/>
-<wire x1="1.736" y1="4.0223" x2="2.3432" y2="4.2689" width="0.1524" layer="21" curve="-17.83212"/>
-<wire x1="3.3155" y1="4.2736" x2="3.9464" y2="4.0175" width="0.1524" layer="21" curve="-18.449318"/>
-<wire x1="4.6199" y1="3.3487" x2="4.8997" y2="2.7179" width="0.1524" layer="21" curve="-19.303177"/>
-<wire x1="4.9045" y1="1.7692" x2="4.6484" y2="1.0909" width="0.1524" layer="21" curve="-20.344696"/>
-<polygon width="0.1524" layer="21">
-<vertex x="1.651" y="0.508"/>
-<vertex x="1.143" y="0.127"/>
-<vertex x="0.762" y="0.508"/>
-<vertex x="1.143" y="1.143"/>
-<vertex x="0.889" y="1.778"/>
-<vertex x="0.127" y="2.032"/>
-<vertex x="0.127" y="1.905"/>
-<vertex x="0.127" y="2.54"/>
-<vertex x="0.889" y="2.667"/>
-<vertex x="1.143" y="3.429"/>
-<vertex x="0.635" y="3.937"/>
-<vertex x="1.016" y="4.318"/>
-<vertex x="1.778" y="3.937"/>
-<vertex x="2.54" y="4.318"/>
-<vertex x="2.413" y="4.318"/>
-<vertex x="2.54" y="4.953"/>
-<vertex x="3.175" y="4.953"/>
-<vertex x="3.175" y="4.191"/>
-<vertex x="3.937" y="3.937"/>
-<vertex x="4.572" y="4.318"/>
-<vertex x="4.953" y="4.064"/>
-<vertex x="4.572" y="3.302"/>
-<vertex x="4.826" y="2.667"/>
-<vertex x="5.588" y="2.54"/>
-<vertex x="5.588" y="1.905"/>
-<vertex x="4.826" y="1.905"/>
-<vertex x="4.572" y="1.016"/>
-<vertex x="4.953" y="0.508"/>
-<vertex x="4.572" y="0.127"/>
-<vertex x="4.064" y="0.508"/>
-<vertex x="3.81" y="0.381"/>
-<vertex x="3.302" y="1.397"/>
-<vertex x="3.81" y="1.905"/>
-<vertex x="3.81" y="2.54"/>
-<vertex x="3.429" y="3.175"/>
-<vertex x="2.794" y="3.302"/>
-<vertex x="2.032" y="3.048"/>
-<vertex x="2.159" y="3.048"/>
-<vertex x="1.778" y="2.413"/>
-<vertex x="2.032" y="1.651"/>
-<vertex x="2.286" y="1.397"/>
-<vertex x="1.905" y="0.381"/>
-</polygon>
-</package>
 </packages>
 <symbols>
 <symbol name="28CXXX">
@@ -593,80 +511,6 @@ Adapted from OSHW Logo Repository:&lt;br&gt;
 <wire x1="33.02" y1="30.48" x2="-33.02" y2="30.48" width="0.254" layer="94"/>
 <text x="-33.02" y="33.02" size="1.778" layer="95" align="top-left">&gt;NAME</text>
 <text x="-33.02" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="OSHW">
-<description>&lt;b&gt;OSHW Logo&lt;/b&gt;
-&lt;p&gt;
-Adapted from Bacon Fat Labs:&lt;br&gt;
-&lt;a href="http://www.baconfatlabs.com/2011/11/oshw-eagle-symbols-for-schematic-and-silkscreen"&gt;http://www.baconfatlabs.com/2011/11/oshw-eagle-symbols-for-schematic-and-silkscreen&lt;/a&gt;</description>
-<wire x1="2.0048" y1="-4.84" x2="2.7761" y2="-4.4428" width="0.4064" layer="94" curve="9.499291"/>
-<wire x1="2.7761" y1="-4.4428" x2="4.6913" y2="-6.0046" width="0.4064" layer="94"/>
-<wire x1="4.6913" y1="-6.0046" x2="6.0046" y2="-4.6913" width="0.4064" layer="94"/>
-<wire x1="6.0046" y1="-4.6913" x2="4.4428" y2="-2.7761" width="0.4064" layer="94"/>
-<wire x1="4.4428" y1="-2.7761" x2="5.1045" y2="-1.1785" width="0.4064" layer="94" curve="18.999182"/>
-<wire x1="5.1045" y1="-1.1785" x2="7.5632" y2="-0.9286" width="0.4064" layer="94"/>
-<wire x1="7.5632" y1="-0.9286" x2="7.5632" y2="0.9286" width="0.4064" layer="94"/>
-<wire x1="7.5632" y1="0.9286" x2="5.1045" y2="1.1785" width="0.4064" layer="94"/>
-<wire x1="5.1045" y1="1.1785" x2="4.4428" y2="2.7761" width="0.4064" layer="94" curve="18.999182"/>
-<wire x1="4.4428" y1="2.7761" x2="6.0046" y2="4.6913" width="0.4064" layer="94"/>
-<wire x1="6.0046" y1="4.6913" x2="4.6913" y2="6.0046" width="0.4064" layer="94"/>
-<wire x1="4.6913" y1="6.0046" x2="2.7761" y2="4.4428" width="0.4064" layer="94"/>
-<wire x1="2.7761" y1="4.4428" x2="1.1785" y2="5.1045" width="0.4064" layer="94" curve="18.999182"/>
-<wire x1="1.1785" y1="5.1045" x2="0.9286" y2="7.5632" width="0.4064" layer="94"/>
-<wire x1="0.9286" y1="7.5632" x2="-0.9286" y2="7.5632" width="0.4064" layer="94"/>
-<wire x1="-0.9286" y1="7.5632" x2="-1.1785" y2="5.1045" width="0.4064" layer="94"/>
-<wire x1="-1.1785" y1="5.1045" x2="-2.7761" y2="4.4428" width="0.4064" layer="94" curve="18.999182"/>
-<wire x1="-2.7761" y1="4.4428" x2="-4.6913" y2="6.0046" width="0.4064" layer="94"/>
-<wire x1="-4.6913" y1="6.0046" x2="-6.0046" y2="4.6913" width="0.4064" layer="94"/>
-<wire x1="-6.0046" y1="4.6913" x2="-4.4428" y2="2.7761" width="0.4064" layer="94"/>
-<wire x1="-4.4428" y1="2.7761" x2="-5.1045" y2="1.1785" width="0.4064" layer="94" curve="18.999182"/>
-<wire x1="-5.1045" y1="1.1785" x2="-7.5632" y2="0.9286" width="0.4064" layer="94"/>
-<wire x1="-7.5632" y1="0.9286" x2="-7.5632" y2="-0.9286" width="0.4064" layer="94"/>
-<wire x1="-7.5632" y1="-0.9286" x2="-5.1045" y2="-1.1785" width="0.4064" layer="94"/>
-<wire x1="-5.1045" y1="-1.1785" x2="-4.4428" y2="-2.7761" width="0.4064" layer="94" curve="18.999182"/>
-<wire x1="-4.4428" y1="-2.7761" x2="-6.0046" y2="-4.6913" width="0.4064" layer="94"/>
-<wire x1="-6.0046" y1="-4.6913" x2="-4.6913" y2="-6.0046" width="0.4064" layer="94"/>
-<wire x1="-4.6913" y1="-6.0046" x2="-2.7761" y2="-4.4428" width="0.4064" layer="94"/>
-<wire x1="-2.7761" y1="-4.4428" x2="-2.0048" y2="-4.84" width="0.4064" layer="94" curve="9.499291"/>
-<wire x1="-2.0048" y1="-4.84" x2="-0.9113" y2="-2.2" width="0.4064" layer="94"/>
-<wire x1="-0.9113" y1="-2.2" x2="-2.3813" y2="0" width="0.4064" layer="94" curve="-67.502133"/>
-<wire x1="-2.3813" y1="0" x2="0.9113" y2="-2.2" width="0.4064" layer="94" curve="-247.498918"/>
-<wire x1="0.9113" y1="-2.2" x2="2.0048" y2="-4.84" width="0.4064" layer="94"/>
-<polygon width="0.4064" layer="94">
-<vertex x="2.0048" y="-4.84" curve="9.499291"/>
-<vertex x="2.7761" y="-4.4428"/>
-<vertex x="4.6913" y="-6.0046"/>
-<vertex x="6.0046" y="-4.6913"/>
-<vertex x="4.4428" y="-2.7761" curve="18.999182"/>
-<vertex x="5.1045" y="-1.1785"/>
-<vertex x="7.5632" y="-0.9286"/>
-<vertex x="7.5632" y="0.9286"/>
-<vertex x="5.1045" y="1.1785" curve="18.999182"/>
-<vertex x="4.4428" y="2.7761"/>
-<vertex x="6.0046" y="4.6913"/>
-<vertex x="4.6913" y="6.0046"/>
-<vertex x="2.7761" y="4.4428" curve="18.999182"/>
-<vertex x="1.1785" y="5.1045"/>
-<vertex x="0.9286" y="7.5632"/>
-<vertex x="-0.9286" y="7.5632"/>
-<vertex x="-1.1785" y="5.1045" curve="18.999182"/>
-<vertex x="-2.7761" y="4.4428"/>
-<vertex x="-4.6913" y="6.0046"/>
-<vertex x="-6.0046" y="4.6913"/>
-<vertex x="-4.4428" y="2.7761" curve="18.999182"/>
-<vertex x="-5.1045" y="1.1785"/>
-<vertex x="-7.5632" y="0.9286"/>
-<vertex x="-7.5632" y="-0.9286"/>
-<vertex x="-5.1045" y="-1.1785" curve="18.999182"/>
-<vertex x="-4.4428" y="-2.7761"/>
-<vertex x="-6.0046" y="-4.6913"/>
-<vertex x="-4.6913" y="-6.0046"/>
-<vertex x="-2.7761" y="-4.4428" curve="9.499291"/>
-<vertex x="-2.0048" y="-4.84"/>
-<vertex x="-0.9113" y="-2.2" curve="-67.502133"/>
-<vertex x="-2.3813" y="0" curve="-247.498918"/>
-<vertex x="0.9113" y="-2.2"/>
-</polygon>
 </symbol>
 </symbols>
 <devicesets>
@@ -805,19 +649,6 @@ Adapted from Bacon Fat Labs:&lt;br&gt;
 <connect gate="P2" pin="VDD" pad="28"/>
 <connect gate="P2" pin="VSS" pad="29"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="OSHW" prefix="LOGO">
-<description>&lt;b&gt;OSHW Logo&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="OSHW" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="OSHW">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -8159,7 +7990,6 @@ Source: www.kingbright.com</description>
 <part name="P+1" library="supply1" deviceset="+5V" device="" value="5V"/>
 <part name="P+7" library="supply1" deviceset="+5V" device="" value="5V"/>
 <part name="P+8" library="supply1" deviceset="+5V" device="" value="5V"/>
-<part name="U$1" library="usb-eeprom" deviceset="OSHW" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8170,7 +8000,7 @@ Source: www.kingbright.com</description>
 <text x="88.9" y="114.6175" size="1.778" layer="97">3V3</text>
 </plain>
 <instances>
-<instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
+<instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0"/>
 <instance part="XU1" gate="A" x="218.44" y="104.14">
 <attribute name="MFG" x="218.44" y="104.14" size="1.778" layer="96" display="off"/>
@@ -8274,7 +8104,6 @@ Source: www.kingbright.com</description>
 <instance part="P+8" gate="1" x="170.18" y="167.64" smashed="yes">
 <attribute name="VALUE" x="170.18" y="168.275" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="U$1" gate="G$1" x="266.7" y="43.18"/>
 </instances>
 <busses>
 <bus name="A[0..14]">
