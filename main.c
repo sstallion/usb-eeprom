@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Steven Stallion
+ * Copyright (c) 2015 Steven Stallion
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -168,10 +168,10 @@ void
 EEPROMErase(void)
 {
 	static uint16_t addr[] = {
-		0x5555, 0x2AAA, 0x5555, 0x5555, 0x2AAA, 0x5555
+		0x5555, 0x2AAA, 0x5555, 0x5555, 0x2AAA, 0x5555,
 	};
 	static uint8_t data[] = {
-		0xAA, 0x55, 0x80, 0xAA, 0x55, 0x10
+		0xAA, 0x55, 0x80, 0xAA, 0x55, 0x10,
 	};
 
 	TRISD = 0;
@@ -249,7 +249,8 @@ main(void)
 				state = STATE_DATA;
 				break;
 			case 'Z': /* Chip Erase */
-				addr, len = 0;
+				addr = 0;
+				len = 0;
 				EEPROMErase();
 				state = STATE_STATUS;
 				break;
@@ -277,7 +278,8 @@ main(void)
 					EEPROMWritePage(addr, out, n);
 				break;
 			}
-			addr += n, len -= n;
+			addr += n;
+			len -= n;
 			if (len == 0)
 				state = STATE_STATUS;
 			break;
