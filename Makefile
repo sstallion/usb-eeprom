@@ -1,4 +1,4 @@
-# Copyright (c) 2014 Steven Stallion
+# Copyright (c) 2017 Steven Stallion
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -26,17 +26,17 @@ DEVICE = 18F45K50
 PROGRAMMER = PK3 # MPLAB PICkit 3
 
 CC = xc8
-CFLAGS = $(XC8FLAGS) --opt=debug,space
-CPPFLAGS = -I.
-LDFLAGS	= $(XC8FLAGS) --output=intel
-XC8FLAGS = -q --chip=$(DEVICE) --mode=free
+CFLAGS = -G -Q --CHIP=$(DEVICE) --MODE=free --OPT=all
+CPPFLAGS =
+LDFLAGS	= --OUTPUT=elf,intel
 IPECMD = ipecmd.sh
-IPEFLAGS = -p$(DEVICE) -tp$(PROGRAMMER)
+IPEFLAGS = -P$(DEVICE) -TP$(PROGRAMMER)
 
 HEX = usb-eeprom.hex
-OBJS = main.p1 usb_descriptors.p1 usb_device.p1 usb_device_generic.p1
+PFILES = main.p1 usb_descriptors.p1 usb_device.p1 usb_device_generic.p1
 
 .PHONY:	all clean run verify
+.SUFFIXES: .p1
 
 all:	$(HEX)
 
@@ -44,13 +44,13 @@ clean:
 	-$(RM) *.d *.p1 *.pre funclist l.obj log.* startup.* usb-eeprom.*
 
 run:	$(HEX)
-	$(IPECMD) $(IPEFLAGS) -f$< -m -ol
+	$(IPECMD) $(IPEFLAGS) -F$< -M -OL
 
 verify:	$(HEX)
-	$(IPECMD) $(IPEFLAGS) -f$< -y
+	$(IPECMD) $(IPEFLAGS) -F$< -Y
 
-$(HEX):	$(OBJS)	
-	$(CC) $(LDFLAGS) -o$@ $^
+$(HEX):	$(PFILES)
+	$(CC) $(CFLAGS) $(LDFLAGS) -O$@ $^
 
 %.p1:	%.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) --pass1 -o$@ $<
+	$(CC) $(CFLAGS) $(CPPFLAGS) --PASS1 $<

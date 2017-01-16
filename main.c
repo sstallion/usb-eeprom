@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Steven Stallion
+ * Copyright (c) 2017 Steven Stallion
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@
 #define MAX(x, y) ((x) > (y) ? (x) : (y))
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 
-#define NELEM(x) (sizeof (x) / sizeof *(x))
+#define NELEM(x) (sizeof (x) / sizeof (x)[0])
 
 #define ADDRA(x) ((x) & 0xFF)
 #define ADDRB(x) ((x)>>8 & 0x1F)
@@ -46,14 +46,14 @@
 #define nOE (1<<1)	/* Output Enable */
 #define nWE (1<<2)	/* Write Enable */
 
-uint8_t in[USBGEN_EP_SIZE] @0x500;
-uint8_t out[USBGEN_EP_SIZE] @0x540;
-
 enum {
 	STATE_CMD,
 	STATE_DATA,
 	STATE_STATUS,
 } state;
+
+uint8_t in[USBGEN_EP_SIZE] @0x500;
+uint8_t out[USBGEN_EP_SIZE] @0x540;
 
 void
 ClockInit(void)

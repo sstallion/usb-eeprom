@@ -16,7 +16,7 @@ principal place of business at 2355 W. Chandler Blvd., Chandler, AZ
 accompanying Microchip software, including any PC programs, and any
 modifications or updates thereto (collectively, the "Software"), and
 accompanying documentation, including images and any other graphic
-resources provided by Microchip ("Documentation"). 
+resources provided by Microchip ("Documentation").
 
 1.      Definitions.   As used in this Agreement, the following
 capitalized terms will have the meanings defined below:
@@ -57,11 +57,11 @@ Licensee notifies end users that: (1) the modified PC program is derived
 from a Microchip PC program and is governed by the terms of this Agreement
 including the requirement to use such program with Microchip Products, (2)
 a copy of this Agreement is available upon request, and (3) the Licensee
-supports the modified PC program. 
+supports the modified PC program.
 
 For purposes of clarity, Licensee may NOT embed the Software on a
 non-Microchip Product, except as expressly described in this Section 2 or
-the Documentation. 
+the Documentation.
 
 3.      Documentation License Grant.  Microchip grants to Licensee a
 non-exclusive, non-transferable, worldwide license to use the
@@ -111,7 +111,7 @@ directly or indirectly arising from or related to the use, modification,
 disclosure or distribution of the Software, Documentation, or any
 intellectual property rights related thereto; (y) the use, sale and
 distribution of Licensee Products or Third Party Products; and (z) breach
-of this Agreement. 
+of this Agreement.
 
 7.      Confidentiality.  Licensee agrees that the Software (including but
 not limited to the source code, object code and library files) and its
@@ -167,7 +167,7 @@ LICENSORS ASSUME NO RESPONSIBILITY FOR THE ACCURACY, RELIABILITY OR
 APPLICATION OF THE SOFTWARE OR DOCUMENTATION.  MICROCHIP AND ITS LICENSORS
 DO NOT WARRANT THAT THE SOFTWARE WILL MEET REQUIREMENTS OF LICENSEE OR
 THIRD PARTY, BE UNINTERRUPTED OR ERROR-FREE.  MICROCHIP AND ITS LICENSORS
-HAVE NO OBLIGATION TO CORRECT ANY DEFECTS IN THE SOFTWARE. 
+HAVE NO OBLIGATION TO CORRECT ANY DEFECTS IN THE SOFTWARE.
 
 11.    Limited Liability.  IN NO EVENT WILL MICROCHIP OR ITS LICENSORS BE
 LIABLE OR OBLIGATED UNDER ANY LEGAL OR EQUITABLE THEORY FOR ANY DIRECT OR
@@ -189,7 +189,7 @@ out of or related to this Agreement, Software or Documentation will be
 brought exclusively in either the U.S. District Court for the District of
 Arizona, Phoenix Division, or the Superior Court of Arizona located in
 Maricopa County, Arizona.  This Agreement will constitute the entire
-agreement between the parties with respect to the subject matter hereof. 
+agreement between the parties with respect to the subject matter hereof.
 It will not be modified except by a written agreement signed by an
 authorized representative of Microchip.  If any provision of this
 Agreement will be held by a court of competent jurisdiction to be illegal,
