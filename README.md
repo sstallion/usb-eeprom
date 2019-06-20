@@ -38,7 +38,7 @@ written in Go. Installing the `eeprom` tool requires Go 1.2 and libusb 1.0; see
 
 To install the `eeprom` tool, issue:
 
-    $ go get github.com/sstallion/go/cmd/eeprom
+    $ go get github.com/sstallion/go-eeprom/cmd/eeprom
 
 Once installed, issue `eeprom help` for more detail about its usage.
 
