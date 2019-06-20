@@ -1,19 +1,15 @@
 # 28Cxxx EEPROM Programmer
 
 This repository contains the firmware and hardware design for a PIC18F-based
-USB programmer for the 28Cxxx series of parallel EEPROMs. The firmware and
-hardware design are licensed under the Simplified BSD License with some
-additional restrictions; see `LICENSE` and `LICENSE-MLA` for more detail.
+USB programmer for the 28Cxxx series of parallel EEPROMs.
 
-This project meets the requirements of the OSHW Definition. CadSoft EAGLE
-design files and an example bill of materials can be found in the `eagle`
-subdirectory. For those without access to EAGLE, a PDF of the schematic and
-board layout is provided.
+This project meets the requirements of the [OSHW Definition][1]. CadSoft EAGLE
+design files and an example bill of materials can be found in the [eagle]
+directory. For those without access to EAGLE, a PDF of the schematic and board
+layout is provided.
 
-PCBs may be ordered from [OSH Park](http://oshpark.com/shared_projects/PVCsM6xC).
-
-Fully assembled and tested units may be purchased from
-[Tindie](https://www.tindie.com/products/sstallion/28cxxx-eeprom-programmer).
+PCBs may be ordered from [OSH Park][2]. Fully assembled and tested units may
+also be purchased from [Tindie][3].
 
 ## Firmware
 
@@ -34,13 +30,13 @@ Other programmers may be used; see `Makefile` for more detail.
 
 A cross-platform command line tool was developed to drive the programmer,
 written in Go. Installing the `eeprom` tool requires Go 1.2 and libusb 1.0; see
-[Getting Started](http://golang.org/doc/install) for more detail.
+[Getting Started][4] for more details.
 
 To install the `eeprom` tool, issue:
 
     $ go get github.com/sstallion/go-eeprom/cmd/eeprom
 
-Once installed, issue `eeprom help` for more detail about its usage.
+Once installed, issue `eeprom help` to display usage.
 
 ## Compatibility
 
@@ -50,8 +46,22 @@ Atmel AT28C and compatible families.
 
 _High-voltage programming is not supported._
 
-## Support
+## Contributing
 
-Issues should be reported on [GitHub](https://github.com/sstallion/usb-eeprom/issues).
-A [wiki](https://github.com/sstallion/usb-eeprom/wiki) is also maintained,
-which contains additional documentation.
+Pull requests are welcome! If a problem is encountered using this repository,
+please file an issue on [GitHub][5].
+
+## License
+
+Source code in this repository is licensed under a Simplified BSD License with
+additional restrictions. See [LICENSE] and [LICENSE-MLA] for more details.
+
+[1]: https://www.oshwa.org/definition/
+[2]: http://oshpark.com/shared_projects/PVCsM6xC
+[3]: https://www.tindie.com/products/sstallion/28cxxx-eeprom-programmer
+[4]: http://golang.org/doc/install
+[5]: https://github.com/sstallion/usb-eeprom/issues
+
+[LICENSE]: LICENSE
+[LICENSE-MLA]: LICENSE-MLA
+[eagle]: eagle
